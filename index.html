@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mint Leaf vs Banana Leaf</title>
+    <style>
+        :root {
+            --mint-green: #4ade80;
+            --mint-dark: #14532d;
+            --banana-green: #85e043;
+            --banana-dark: #1e3a1e;
+            --bg-light: #f4f9f4;
+            --text-dark: #2d3748;
+            --smooth-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        html { scroll-behavior: smooth; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
+        body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; padding: 20px; animation: fadeInPage 0.8s ease-out forwards; opacity: 0; }
+        @keyframes fadeInPage { to { opacity: 1; } }
+        header { text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #2e7d32, #1b5e20); color: white; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: var(--smooth-transition); }
+        header:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(27, 94, 32, 0.15); }
+        header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 40px; }
+        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+        .card { background: white; border-radius: 16px; padding: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border-top: 8px solid; transition: var(--smooth-transition); transform: translateY(0); }
+        .card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
+        .mint-card { border-top-color: var(--mint-green); }
+        .banana-card { border-top-color: var(--banana-green); }
+        .mint-card:hover { box-shadow: 0 12px 30px rgba(74, 222, 128, 0.15); }
+        .banana-card:hover { box-shadow: 0 12px 30px rgba(133, 224, 67, 0.15); }
+        h2 { margin-bottom: 20px; font-size: 1.8rem; display: flex; align-items: center; gap: 10px; }
+        .mint-card h2 { color: var(--mint-dark); }
+        .banana-card h2 { color: var(--banana-dark); }
+        .traits-list { list-style-type: none; }
+        .traits-list li { margin-bottom: 14px; padding-left: 28px; position: relative; transition: var(--smooth-transition); }
+        .traits-list li:hover { transform: translateX(4px); color: #000; }
+        .traits-list li::before { content: "🌿"; position: absolute; left: 0; top: 0; }
+        .table-section { background: white; padding: 35px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); transition: var(--smooth-transition); }
+        .table-section h3 { margin-bottom: 25px; text-align: center; font-size: 1.5rem; color: #1e293b; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 14px 18px; text-align: left; border-bottom: 1px solid #e2e8f0; transition: var(--smooth-transition); }
+        th { background-color: #edf7ed; color: #1b5e20; font-weight: 600; }
+        tr:hover td { background-color: #f7faf7; color: #1b5e20; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Nature's Wonders: Mint vs. Banana Leaf</h1>
+            <p>Exploring the unique traits, features, and culinary uses of two incredible leaves.</p>
+        </header>
+        <div class="grid">
+            <div class="card mint-card">
+                <h2>🌱 Mint Leaf</h2>
+                <ul class="traits-list">
+                    <li><strong>Size & Shape:</strong> Small, lance-shaped, or oval leaves with serrated edges.</li>
+                    <li><strong>Aroma:</strong> Highly aromatic with a sharp, cooling, refreshing menthol scent.</li>
+                    <li><strong>Texture:</strong> Soft, delicate, and slightly wrinkled surface.</li>
+                    <li><strong>Key Feature:</strong> Contains menthol, triggering cold-sensitive oral receptors.</li>
+                    <li><strong>Primary Uses:</strong> Garnishes, teas, cocktails (mojitos), and oral hygiene.</li>
+                </ul>
+            </div>
+            <div class="card banana-card">
+                <h2>🌴 Banana Leaf</h2>
+                <ul class="traits-list">
+                    <li><strong>Size & Shape:</strong> Massive, broad, oblong leaves growing up to 2 meters long.</li>
+                    <li><strong>Aroma:</strong> Subtle, grassy, and sweet earthy aroma when heated.</li>
+                    <li><strong>Texture:</strong> Smooth, waxy upper surface, thick, flexible, and waterproof.</li>
+                    <li><strong>Key Feature:</strong> Contains natural antioxidants that infuse into warm food.</li>
+                    <li><strong>Primary Uses:</strong> Serving platters, eco-friendly food wrappers, and rituals.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="table-section">
+            <h3>Quick Comparison Matrix</h3>
+            <table>
+                <thead>
+                    <tr><th>Feature</th><th>Mint Leaf</th><th>Banana Leaf</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Edibility</strong></td><td>Eaten directly</td><td>Not eaten; used for wrapping/cooking</td></tr>
+                    <tr><td><strong>Waterproof?</strong></td><td>No, absorbs moisture</td><td>Yes, natural waxy layer</td></tr>
+                    <tr><td><strong>Primary Benefit</strong></td><td>Freshens breath, aids digestion</td><td>Imparts earthy flavor, eco-plate</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
